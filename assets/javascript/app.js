@@ -2,12 +2,12 @@
 var questionBank = [
     {
         question: "q1",
-        answers: ["a1a", "a1b", "a1c","a1d"],
+        answers: ["a1a", "a1b", "a1c", "a3d"],
         correctIndex: 0
     },
     {
         question: "q2",
-        answers: ["a2a", "a2b", "a2c","a2d"],
+        answers: ["a2a", "a2b", "a2c", "a3d"],
         correctIndex: 0
     },
     {
@@ -125,7 +125,7 @@ function renderQuestions(questionSet) {
         for (j = 0; j < questionSet[i].answers.length; j++) {
             var answerButton = $("<input>");
             answerButton.attr("type", "radio");
-            answerButton.attr("name", "answer");
+            answerButton.attr("name", "answer-" + questionSet[i].question);
             answerButton.attr("value", questionSet[i].answers[j])
             
             var answerText = $("<span>");
@@ -135,7 +135,8 @@ function renderQuestions(questionSet) {
             console.log(questionSet[i].answers[j])
         }
     }
-
 };
+
+renderQuestions(getQuestions(questionBank));
 
 
