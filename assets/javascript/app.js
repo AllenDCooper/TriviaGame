@@ -120,25 +120,33 @@ function renderQuestions(questionSet) {
         var questionDiv = $("<h2>");
         questionDiv.text(questionSet[i].question);
         $("#display").append(questionDiv);
-        console.log(questionSet[i].question);
 
         for (j = 0; j < questionSet[i].answers.length; j++) {
             var answerButton = $("<input>");
             answerButton.attr("type", "radio");
-            answerButton.attr("name", "answer-" + questionSet[i].question);
+            answerButton.attr("id", questionSet[i].question)
+            answerButton.attr("name", "question-" + (i + 1));
             answerButton.attr("value", questionSet[i].answers[j])
             $("#display").append(answerButton);
-            
+
             var answerLabel = $("<label>");
             answerLabel.append(questionSet[i].answers[j]);
             $("#display").append(answerLabel);
-            console.log(questionSet[i].answers[j])
         }
     }
 };
 
+
 // function to check if answers are correct
-//$("input[name='answer-'" + questionSet[i]+"]:checked")
+$("form").submit(function(){
+    event.preventDefault();
+    for (i = 1; i < 5; i++) {
+        var answer = [];
+        answer[i] = $("input[name='question-" + i + "']:checked").val();
+        console.log(answer[i]);
+    }
+});
+
 
 renderQuestions(getQuestions(questionBank));
 
