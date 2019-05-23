@@ -1,104 +1,114 @@
 // creates variable questionBank that contains an array of questions as objects 
 var questionBank = [
     {
-        question: "q1",
-        answers: ["a1a", "a1b", "a1c", "a3d"],
+        question: "Which institution had the highest enrollment in the US in fall 2015, with 165,743 students? (nces.ed.gov)",
+        answers: ["Ivy Tech CC", "Houston CC", "University of Phoenix", "Liberty University"],
+        correctIndex: 2
+    },
+    {
+        question: "Which institution had the 4th highest enrollment in the US in fall 2015 with 70,724 students? (nces.ed.gov)",
+        answers: ["Ivy Tech CC", "Lone Star College", "Liberty University", "Miami Dade College"],
+        correctIndex: 1
+    },
+    {
+        question: "What percentage of first-time, full-time undergraduate students who began seeking a bachelor's degree at a 4-year degree-granting institution in fall 2010 had graduated by 2016? (nces.ed.gov)",
+        answers: ["80%", "70%", "60%","50%"],
+        correctIndex: 2
+    },
+    {
+        question: "What percentage of first-time, full-time students who began seeking a bachelor's degree at an OPEN-ENROLLMENT 4-year degree-granting institution in fall 2010 had graduated by 2016? (nces.ed.gov)",
+        answers: ["61%", "49%", "39%","32%"],
+        correctIndex: 3
+    },
+    {
+        question: "The 6-year graduation rate for first-time, full-time students who began seeking a bachelor's degree in 2010 was _____ at PUBLIC institutions. (nces.ed.gov)",
+        answers: ["66%", "59%", "39%","26%"],
+        correctIndex: 1
+    },
+    {
+        question: "The 6-year graduation rate for first-time, full-time students who began seeking a bachelor's degree in 2010 was _____ at PRIVATE NON-PROFIT institutions. (nces.ed.gov)",
+        answers: ["66%", "59%", "39%","26%"],
         correctIndex: 0
     },
     {
-        question: "q2",
-        answers: ["a2a", "a2b", "a2c", "a3d"],
+        question: "The 6-year graduation rate for first-time, full-time students who began seeking a bachelor's degree in 2010 was _____ at FOR-PROFIT institutions. (nces.ed.gov)",
+        answers: ["66%", "59%", "39%","26%"],
+        correctIndex: 3
+    },
+    {
+        question: "What percentage of WHITE 25-29 year olds in 2017 had received a Bachelor's Degree or higher? (nces.ed.gov)",
+        answers: ["62.7%", "42.1%", "22.8%","18.5%"],
+        correctIndex: 1
+    },
+    {
+        question: "What percentage of BLACK 25-29 year olds in 2017 had received a Bachelor's Degree or higher? (nces.ed.gov)",
+        answers: ["62.7%", "42.1%", "22.8%","18.5%"],
+        correctIndex: 2
+    },
+    {
+        question: "What percentage of HISPANIC 25-29 year olds in 2017 had received a Bachelor's Degree or higher? (nces.ed.gov)",
+        answers: ["62.7%", "42.1%", "22.8%","18.5%"],
+        correctIndex: 3
+    },
+    {
+        question: "What percentage of ASIAN 25-29 year olds in 2017 had received a Bachelor's Degree or higher? (nces.ed.gov)",
+        answers: ["62.7%", "42.1%", "22.8%","18.5%"],
         correctIndex: 0
     },
     {
-        question: "q3",
-        answers: ["a3a", "a3b", "a3c","a3d"],
+        question: "What percentage of undergraduate students had enrolled exclusively in distance learning course in 2015? (nces.ed.gov)",
+        answers: ["14.4%", "12.1%", "10.5%","9.2%"],
         correctIndex: 0
     },
     {
-        question: "q4",
-        answers: ["a4a", "a4b", "a4c","a4d"],
+        question: "What percentage of undergraduate students had not taken a distance learning course in 2015? (nces.ed.gov)",
+        answers: ["70%", "60%", "50%","40%"],
         correctIndex: 0
     },
     {
-        question: "q5",
-        answers: ["a5a", "a5b", "a5c","a5d"],
+        question: "What percentage of undergraduate students reported having a disability in 2011? (nces.ed.gov)",
+        answers: ["3%", "5%", "8%","11%"],
+        correctIndex: 3
+    },
+    {
+        question: "What is the average conversion rate from intern to full-time hire? (NACE)",
+        answers: ["60%", "45%", "30%","15%"],
+        correctIndex: 1
+    },
+    {
+        question: "On average, how many months in advance of start date do employers begin recruting interns? (NACE)",
+        answers: ["3 months", "4 months", "5 months","8 months"],
+        correctIndex: 3
+    },
+    {
+        question: "What is the average annual salary of the class of 2018 graduates? (NACE)",
+        answers: ["$30,000", "$40,000", "$50,000","$60,000"],
+        correctIndex: 2
+    },
+    {
+        question: "What percentage of college seniors have internship experience?",
+        answers: ["30%", "38%", "45%","55%"],
+        correctIndex: 3
+    },
+    {
+        question: "What percentage of employers deem critical thinking/problem solving as very extremely essential in new hires? (NACE, Job Outlook 2019)",
+        answers: ["70%", "80%", "90%","100%"],
         correctIndex: 0
     },
     {
-        question: "q6",
-        answers: ["a6a", "a6b", "a6c","a6d"],
+        question: "What percentage of career centers offer for-credit classes? (NACE 17-18 Career Services Benchmarking Survey)",
+        answers: ["50%", "42%", "30%","22%"],
+        correctIndex: 1
+    },
+    {
+        question: "What percentage of career centers are housed in student affairs? (NACE 17-18 Career Services Benchmarking Survey)",
+        answers: ["49%", "39%", "29%","19%"],
         correctIndex: 0
     },
     {
-        question: "q7",
-        answers: ["a7a", "a7b", "a7c","a7d"],
-        correctIndex: 0
-    },
-    {
-        question: "q8",
-        answers: ["a8a", "a8b", "a8c","a8d"],
-        correctIndex: 0
-    },
-    {
-        question: "q9",
-        answers: ["a9a", "a9b", "a9c","a9d"],
-        correctIndex: 0
-    },
-    {
-        question: "q10",
-        answers: ["a10a", "a10b", "a10c","a10d"],
-        correctIndex: 0
-    },
-    {
-        question: "q11",
-        answers: ["a11a", "a11b", "a11c","a11d"],
-        correctIndex: 0
-    },
-    {
-        question: "q12",
-        answers: ["a12a", "a12b", "a12c","a12d"],
-        correctIndex: 0
-    },
-    {
-        question: "q13",
-        answers: ["a13a", "a13b", "a13c","a13d"],
-        correctIndex: 0
-    },
-    {
-        question: "q14",
-        answers: ["a14a", "a14b", "a14c","a14d"],
-        correctIndex: 0
-    },
-    {
-        question: "q15",
-        answers: ["a15a", "a15b", "a15c","a15d"],
-        correctIndex: 0
-    },
-    {
-        question: "q16",
-        answers: ["a16a", "a16b", "a16c","a16d"],
-        correctIndex: 0
-    },
-    {
-        question: "q17",
-        answers: ["a17a", "a17b", "a17c","a17d"],
-        correctIndex: 0
-    },
-    {
-        question: "q18",
-        answers: ["a18a", "a18b", "a18c","a18d"],
-        correctIndex: 0
-    },
-    {
-        question: "q19",
-        answers: ["a19a", "a19b", "a19c","a19d"],
-        correctIndex: 0
-    },
-    {
-        question: "q20",
-        answers: ["a20a", "a20b", "a20c","a20d"],
-        correctIndex: 0
+        question: "What is the median number of professional career services staff at an institution? (NACE 17-18 Career Services Benchmarking Survey)",
+        answers: ["24", "17", "9","3"],
+        correctIndex: 3
     },
 ];
 
@@ -116,7 +126,7 @@ function getQuestions(arr) {
 // function to render trivia questions and answers
 function renderQuestions(questionSet) {
     runTimer();
-    $("#timer-display").text(5);
+    $("#timer-display").text("Time Remaining: " + 5 + " seconds");
     $("#play-again-button").text("");
     $("#start-button").text("");
     $("#display").text("")
@@ -201,7 +211,7 @@ function runTimer() {
 // count function
 function decrement() {
     time--;
-    $("#timer-display").text(time);
+    $("#timer-display").text("Time Remaining: " + time + " seconds");
     if (time === 0) {
         clearInterval(intervalId);
         endRound();
