@@ -115,11 +115,14 @@ function getQuestions(arr) {
 
 // function to render trivia questions and answers
 function renderQuestions(questionSet) {
+    runTimer();
+    $("#timer-display").text(5);
     $("#play-again-button").text("");
     $("#start-button").text("");
-    $("#display").text("");
+    $("#display").text("")
     $("#submit-button").append("<button type=submit>Done</button>");
-    
+
+
     // for loop to render questions
     for (i = 0; i < 4; i++) {
         var questionDiv = $("<h2>");
@@ -148,7 +151,6 @@ function renderQuestions(questionSet) {
             answerLabel.append(questionSet[i].answers[j]);
             $("#display").append(answerLabel);
         }
-        console.log(questionSet);
     }
 };
 
@@ -157,13 +159,12 @@ var correctAnswers = 0;
 var incorrectAnswers = 0;
 var blankAnswers = 0;
 
-// function to check if the answers selected by user are correct
-$("form").submit(function() {
-    event.preventDefault();
+// function to end the round and score user answers
+function endRound() {
+    time = 5;
     for (i = 1; i < 5; i++) {
         var answer = [];
         answer[i] = $("input[name='question-" + i + "']:checked").val();
-        console.log(answer[i]);
         if (answer[i] === "correct") {
             correctAnswers++
         } else if (answer[i] === "incorrect") {
@@ -172,17 +173,42 @@ $("form").submit(function() {
             blankAnswers++
         }
     }
-
     // render scores on the page
     $("#display").text("")
+    $("#timer-display").text("")
     $("button").remove();
     $("#display").append("<h2>All Done!<h2>")
     $("#display").append("<h3>Correct Answers: " + correctAnswers + "</h3>")
     $("#display").append("<h3>Incorrect Answers: " + incorrectAnswers + "</h3>")
     $("#display").append("<h3>Unanswered: " + blankAnswers + "</h3>")
     $("#play-again-button").append("<button id=reset>Play Again</button>")
+};
+
+// function to score user answers when user submits
+$("form").submit(function() {
+    event.preventDefault();
+    endRound();
 });
 
+// function to run timer and end round when time elapses
+var intervalId;
+var time = 5;
+function runTimer() {
+    clearInterval(intervalId);
+    intervalId = setInterval(decrement, 1000);
+};
+
+// count function
+function decrement() {
+    time--;
+    $("#timer-display").text(time);
+    if (time === 0) {
+        clearInterval(intervalId);
+        endRound();
+    };
+}
+
+// starts new round when user clicks play again button
 $("#play-again-button").on("click", function(event) {
     event.preventDefault();
     renderQuestions(getQuestions(questionBank));
