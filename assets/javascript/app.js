@@ -127,15 +127,18 @@ function renderQuestions(questionSet) {
             answerButton.attr("type", "radio");
             answerButton.attr("name", "answer-" + questionSet[i].question);
             answerButton.attr("value", questionSet[i].answers[j])
+            $("#display").append(answerButton);
             
-            var answerText = $("<span>");
-            answerText.text(questionSet[i].answers[j]);
-            answerText = answerText.prepend(answerButton);
-            $("#display").append(answerText);
+            var answerLabel = $("<label>");
+            answerLabel.append(questionSet[i].answers[j]);
+            $("#display").append(answerLabel);
             console.log(questionSet[i].answers[j])
         }
     }
 };
+
+// function to check if answers are correct
+//$("input[name='answer-'" + questionSet[i]+"]:checked")
 
 renderQuestions(getQuestions(questionBank));
 
