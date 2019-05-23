@@ -126,7 +126,14 @@ function renderQuestions(questionSet) {
             answerButton.attr("type", "radio");
             answerButton.attr("id", questionSet[i].question)
             answerButton.attr("name", "question-" + (i + 1));
-            answerButton.attr("value", questionSet[i].answers[j])
+            answerButton.attr("data-value", questionSet[i].answers[j])
+            
+            // checks to if correct answer, and then stores that in value attribute
+            if (j === questionSet[i].correctIndex) {
+                answerButton.attr("value", "correct")
+            } else {
+                answerButton.attr("value", "incorrect")
+            }
             $("#display").append(answerButton);
 
             var answerLabel = $("<label>");
@@ -136,6 +143,10 @@ function renderQuestions(questionSet) {
     }
 };
 
+// variables for score
+var correctAnswers = 0;
+var incorrectAnswers = 0;
+var blankAnswers = 0;
 
 // function to check if answers are correct
 $("form").submit(function(){
@@ -144,6 +155,13 @@ $("form").submit(function(){
         var answer = [];
         answer[i] = $("input[name='question-" + i + "']:checked").val();
         console.log(answer[i]);
+        if (answer[i] === "correct") {
+            correctAnswers++
+        } else if (answer[i] === "incorrect") {
+            incorrectAnswers++
+        } else {
+            blankAnswers++
+        }
     }
 });
 
