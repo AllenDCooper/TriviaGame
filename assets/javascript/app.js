@@ -125,8 +125,9 @@ function getQuestions(arr) {
 
 // function to render trivia questions and answers
 function renderQuestions(questionSet) {
+    time = 60;
     runTimer();
-    $("#timer-display").text("Time Remaining: " + 5 + " seconds");
+    $("#timer-display").text("Time Remaining: " + 60 + " seconds");
     $("#play-again-button").text("");
     $("#start-button").text("");
     $("#display").text("")
@@ -135,7 +136,7 @@ function renderQuestions(questionSet) {
 
     // for loop to render questions
     for (i = 0; i < 4; i++) {
-        var questionDiv = $("<h2>");
+        var questionDiv = $("<p>");
         questionDiv.text(questionSet[i].question);
         $("#display").append(questionDiv);
 
@@ -143,7 +144,6 @@ function renderQuestions(questionSet) {
         for (j = 0; j < questionSet[i].answers.length; j++) {
             var answerButton = $("<input>");
             answerButton.attr("type", "radio");
-            answerButton.attr("id", questionSet[i].question)
             answerButton.attr("name", "question-" + (i + 1));
             answerButton.attr("data-value", questionSet[i].answers[j])
             
@@ -171,7 +171,6 @@ var blankAnswers = 0;
 
 // function to end the round and score user answers
 function endRound() {
-    time = 5;
     for (i = 1; i < 5; i++) {
         var answer = [];
         answer[i] = $("input[name='question-" + i + "']:checked").val();
@@ -185,6 +184,7 @@ function endRound() {
     }
     // render scores on the page
     $("#display").text("")
+    clearInterval(intervalId);
     $("#timer-display").text("")
     $("button").remove();
     $("#display").append("<h2>All Done!<h2>")
@@ -202,7 +202,7 @@ $("form").submit(function() {
 
 // function to run timer and end round when time elapses
 var intervalId;
-var time = 5;
+var time = 60;
 function runTimer() {
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
