@@ -115,6 +115,9 @@ function getQuestions(arr) {
 
 // function to render trivia questions and answers
 function renderQuestions(questionSet) {
+    $("#play-again-button").text("");
+    $("#display").text("");
+    $("#submit-button").append("<button type=submit>Done</button>");
     
     // for loop to render questions
     for (i = 0; i < 4; i++) {
@@ -144,6 +147,7 @@ function renderQuestions(questionSet) {
             answerLabel.append(questionSet[i].answers[j]);
             $("#display").append(answerLabel);
         }
+        console.log(questionSet);
     }
 };
 
@@ -153,7 +157,7 @@ var incorrectAnswers = 0;
 var blankAnswers = 0;
 
 // function to check if the answers selected by user are correct
-$("form").submit(function(){
+$("form").submit(function() {
     event.preventDefault();
     for (i = 1; i < 5; i++) {
         var answer = [];
@@ -170,12 +174,18 @@ $("form").submit(function(){
 
     // render scores on the page
     $("#display").text("")
+    $("button").remove();
     $("#display").append("<h2>All Done!<h2>")
     $("#display").append("<h3>Correct Answers: " + correctAnswers + "</h3>")
     $("#display").append("<h3>Incorrect Answers: " + incorrectAnswers + "</h3>")
     $("#display").append("<h3>Unanswered: " + blankAnswers + "</h3>")
+    $("#play-again-button").append("<button id=reset>Play Again</button>")
 });
 
+$("#play-again-button").on("click", function(event) {
+    event.preventDefault();
+    renderQuestions(getQuestions(questionBank));
+});
 
 renderQuestions(getQuestions(questionBank));
 
