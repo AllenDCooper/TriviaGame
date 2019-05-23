@@ -2,203 +2,103 @@
 var questionBank = [
     {
         question: "q1",
-        answers: {
-            a: "a1a",
-            b: "a1b",
-            c: "a1c",
-            d: "a1d",
-        },
-        correctAnswer: "a"
+        answers: ["a1a", "a1b", "a1c","a1d"],
+        correctIndex: 0
     },
     {
         question: "q2",
-        answers: {
-            a: "a2a",
-            b: "a2b",
-            c: "a2c",
-            d: "a2d",
-        },
-        correctAnswer: "a"
+        answers: ["a2a", "a2b", "a2c","a2d"],
+        correctIndex: 0
     },
     {
         question: "q3",
-        answers: {
-            a: "a3a",
-            b: "a3b",
-            c: "a3c",
-            d: "a3d",
-        },
-        correctAnswer: "a"
+        answers: ["a3a", "a3b", "a3c","a3d"],
+        correctIndex: 0
     },
     {
         question: "q4",
-        answers: {
-            a: "a4a",
-            b: "a4b",
-            c: "a4c",
-            d: "a4d",
-        },
-        correctAnswer: "a"
+        answers: ["a4a", "a4b", "a4c","a4d"],
+        correctIndex: 0
     },
     {
         question: "q5",
-        answers: {
-            a: "a5a",
-            b: "a5b",
-            c: "a5c",
-            d: "a5d",
-        },
-        correctAnswer: "a"
+        answers: ["a5a", "a5b", "a5c","a5d"],
+        correctIndex: 0
     },
     {
         question: "q6",
-        answers: {
-            a: "a6a",
-            b: "a6b",
-            c: "a6c",
-            d: "a6d",
-        },
-        correctAnswer: "a"
+        answers: ["a6a", "a6b", "a6c","a6d"],
+        correctIndex: 0
     },
     {
         question: "q7",
-        answers: {
-            a: "a7a",
-            b: "a7b",
-            c: "a7c",
-            d: "a7d",
-        },
-        correctAnswer: "a"
+        answers: ["a7a", "a7b", "a7c","a7d"],
+        correctIndex: 0
     },
     {
         question: "q8",
-        answers: {
-            a: "a8a",
-            b: "a8b",
-            c: "a8c",
-            d: "a8d",
-        },
-        correctAnswer: "a"
+        answers: ["a8a", "a8b", "a8c","a8d"],
+        correctIndex: 0
     },
     {
         question: "q9",
-        answers: {
-            a: "a9a",
-            b: "a9b",
-            c: "a9c",
-            d: "a9d",
-        },
-        correctAnswer: "a"
+        answers: ["a9a", "a9b", "a9c","a9d"],
+        correctIndex: 0
     },
     {
         question: "q10",
-        answers: {
-            a: "a10a",
-            b: "a10b",
-            c: "a10c",
-            d: "a10d",
-        },
-        correctAnswer: "a"
+        answers: ["a10a", "a10b", "a10c","a10d"],
+        correctIndex: 0
     },
     {
         question: "q11",
-        answers: {
-            a: "a11a",
-            b: "a11b",
-            c: "a11c",
-            d: "a11d",
-        },
-        correctAnswer: "a"
+        answers: ["a11a", "a11b", "a11c","a11d"],
+        correctIndex: 0
     },
     {
         question: "q12",
-        answers: {
-            a: "a12a",
-            b: "a12b",
-            c: "a12c",
-            d: "a12d",
-        },
-        correctAnswer: "a"
+        answers: ["a12a", "a12b", "a12c","a12d"],
+        correctIndex: 0
     },
     {
         question: "q13",
-        answers: {
-            a: "a13a",
-            b: "a13b",
-            c: "a13c",
-            d: "a13d",
-        },
-        correctAnswer: "a"
+        answers: ["a13a", "a13b", "a13c","a13d"],
+        correctIndex: 0
     },
     {
         question: "q14",
-        answers: {
-            a: "a14a",
-            b: "a14b",
-            c: "a14c",
-            d: "a14d",
-        },
-        correctAnswer: "a"
+        answers: ["a14a", "a14b", "a14c","a14d"],
+        correctIndex: 0
     },
     {
         question: "q15",
-        answers: {
-            a: "a15a",
-            b: "a15b",
-            c: "a15c",
-            d: "a15d",
-        },
-        correctAnswer: "a"
+        answers: ["a15a", "a15b", "a15c","a15d"],
+        correctIndex: 0
     },
     {
         question: "q16",
-        answers: {
-            a: "a16a",
-            b: "a16b",
-            c: "a16c",
-            d: "a16d",
-        },
-        correctAnswer: "a"
+        answers: ["a16a", "a16b", "a16c","a16d"],
+        correctIndex: 0
     },
     {
         question: "q17",
-        answers: {
-            a: "a17a",
-            b: "a17b",
-            c: "a17c",
-            d: "a17d",
-        },
-        correctAnswer: "a"
+        answers: ["a17a", "a17b", "a17c","a17d"],
+        correctIndex: 0
     },
     {
         question: "q18",
-        answers: {
-            a: "a18a",
-            b: "a18b",
-            c: "a18c",
-            d: "a18d",
-        },
-        correctAnswer: "a"
+        answers: ["a18a", "a18b", "a18c","a18d"],
+        correctIndex: 0
     },
     {
         question: "q19",
-        answers: {
-            a: "a19a",
-            b: "a19b",
-            c: "a19c",
-            d: "a19d",
-        },
-        correctAnswer: "a"
+        answers: ["a19a", "a19b", "a19c","a19d"],
+        correctIndex: 0
     },
     {
         question: "q20",
-        answers: {
-            a: "a20a",
-            b: "a20b",
-            c: "a20c",
-            d: "a20d",
-        },
-        correctAnswer: "a"
+        answers: ["a20a", "a20b", "a20c","a20d"],
+        correctIndex: 0
     },
 ];
 
@@ -213,9 +113,29 @@ function getQuestions(arr) {
     return questionSet;
 }
 
-// function to render trivia questions
-function renderQuestions(object) {
-$("#display").append(JSON.stringify(getQuestions(object)));
+// function to render trivia questions and answers
+function renderQuestions(questionSet) {
+    
+    for (i = 0; i < 4; i++) {
+        var questionDiv = $("<h2>");
+        questionDiv.text(questionSet[i].question);
+        $("#display").append(questionDiv);
+        console.log(questionSet[i].question);
+
+        for (j = 0; j < questionSet[i].answers.length; j++) {
+            var answerButton = $("<input>");
+            answerButton.attr("type", "radio");
+            answerButton.attr("name", "answer");
+            answerButton.attr("value", questionSet[i].answers[j])
+            
+            var answerText = $("<span>");
+            answerText.text(questionSet[i].answers[j]);
+            answerText = answerText.prepend(answerButton);
+            $("#display").append(answerText);
+            console.log(questionSet[i].answers[j])
+        }
+    }
+
 };
 
 
