@@ -1,4 +1,4 @@
-// define questionBank array that contains questions as objects 
+// creates variable questionBank that contains an array of questions as objects 
 var questionBank = [
     {
         question: "q1",
@@ -116,11 +116,13 @@ function getQuestions(arr) {
 // function to render trivia questions and answers
 function renderQuestions(questionSet) {
     
+    // for loop to render questions
     for (i = 0; i < 4; i++) {
         var questionDiv = $("<h2>");
         questionDiv.text(questionSet[i].question);
         $("#display").append(questionDiv);
 
+        // nested for loop to render answers for each question
         for (j = 0; j < questionSet[i].answers.length; j++) {
             var answerButton = $("<input>");
             answerButton.attr("type", "radio");
@@ -128,14 +130,16 @@ function renderQuestions(questionSet) {
             answerButton.attr("name", "question-" + (i + 1));
             answerButton.attr("data-value", questionSet[i].answers[j])
             
-            // checks to if correct answer, and then stores that in value attribute
+            // checks to if answer is correct, and then stores that in answer's value attribute
             if (j === questionSet[i].correctIndex) {
                 answerButton.attr("value", "correct")
             } else {
                 answerButton.attr("value", "incorrect")
             }
+            // renders answer button on the document
             $("#display").append(answerButton);
 
+            // renders button label on the document
             var answerLabel = $("<label>");
             answerLabel.append(questionSet[i].answers[j]);
             $("#display").append(answerLabel);
@@ -143,12 +147,12 @@ function renderQuestions(questionSet) {
     }
 };
 
-// variables for score
+// creates variables for keeping score
 var correctAnswers = 0;
 var incorrectAnswers = 0;
 var blankAnswers = 0;
 
-// function to check if answers are correct
+// function to check if the answers selected by user are correct
 $("form").submit(function(){
     event.preventDefault();
     for (i = 1; i < 5; i++) {
@@ -163,6 +167,13 @@ $("form").submit(function(){
             blankAnswers++
         }
     }
+
+    // render scores on the page
+    $("#display").text("")
+    $("#display").append("<h2>All Done!<h2>")
+    $("#display").append("<h3>Correct Answers: " + correctAnswers + "</h3>")
+    $("#display").append("<h3>Incorrect Answers: " + incorrectAnswers + "</h3>")
+    $("#display").append("<h3>Unanswered: " + blankAnswers + "</h3>")
 });
 
 
