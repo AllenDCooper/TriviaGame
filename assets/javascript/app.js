@@ -116,6 +116,7 @@ function getQuestions(arr) {
 // function to render trivia questions and answers
 function renderQuestions(questionSet) {
     $("#play-again-button").text("");
+    $("#start-button").text("");
     $("#display").text("");
     $("#submit-button").append("<button type=submit>Done</button>");
     
@@ -187,6 +188,12 @@ $("#play-again-button").on("click", function(event) {
     renderQuestions(getQuestions(questionBank));
 });
 
-renderQuestions(getQuestions(questionBank));
+// render start button upon page load
+$(document).ready(function() {
+    $("#start-button").append("<button id=start>Start</button>")
+})
 
-
+// render questions when start button is clicked
+$("#start-button").on("click", function(){
+    renderQuestions(getQuestions(questionBank));
+});
