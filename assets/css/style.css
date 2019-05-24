@@ -1,15 +1,22 @@
+html {
+    height: 100%;
+    margin: auto;
+    overflow: scroll;
+}
+
 body {
     background-color: #1c2523;
     background-image: url("../images/unc.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     min-height: 100%;
     min-width: 1024px;
     width: 100%;
-    height: auto;
+    height: 100%;
     /* position: fixed; */
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     font-family: 'Mandali', sans-serif;
 }
 
@@ -19,9 +26,10 @@ h1 {
 
 section {
     width: 800px;
+    height: auto;
     background-color: #B5B858;
     margin: 50px auto;
-    padding: 40px;
+    padding: 20px 40px;
 }
 
 #timer-display {
