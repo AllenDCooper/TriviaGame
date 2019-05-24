@@ -12,64 +12,64 @@ var questionBank = [
         correctIndex: 1
     },
     {
-        question: "What percentage of first-time, full-time undergraduate students who began seeking a bachelor's degree at a 4-year degree-granting institution in fall 2010 had graduated by 2016?",
+        question: "What percentage of students who entered a 4-year degree-granting institution graduated within 6 years?",
         answers: ["80%", "70%", "60%","50%"],
         correctIndex: 2
     },
     {
-        question: "What percentage of first-time, full-time students who began seeking a bachelor's degree at an OPEN-ENROLLMENT 4-year degree-granting institution in fall 2010 had graduated by 2016?",
+        question: "What percentage of students who entered OPEN-ENROLLMENT 4-year institutions graduated with a bachelor's degree within 6 years?",
         answers: ["61%", "49%", "39%","32%"],
         correctIndex: 3
     },
     {
-        question: "The 6-year graduation rate for first-time, full-time students who began seeking a bachelor's degree in 2010 was _____ at PUBLIC institutions.",
+        question: "What percentage of students who entered PUBLIC institutions graduated with a bachelor's degree within 6 years?",
         answers: ["66%", "59%", "39%","26%"],
         correctIndex: 1
     },
     {
-        question: "The 6-year graduation rate for first-time, full-time students who began seeking a bachelor's degree in 2010 was _____ at PRIVATE NON-PROFIT institutions.",
+        question: "What percentage of students who entered PRIVATE NON-PROFIT institutions graduated with a bachelor's degree within 6 years?",
         answers: ["66%", "59%", "39%","26%"],
         correctIndex: 0
     },
     {
-        question: "The 6-year graduation rate for first-time, full-time students who began seeking a bachelor's degree in 2010 was _____ at FOR-PROFIT institutions.",
+        question: "What percentage of students who entered FOR-PROFIT institutions graduated with a bachelor's degree within 6 years?",
         answers: ["66%", "59%", "39%","26%"],
         correctIndex: 3
     },
     {
-        question: "What percentage of WHITE 25-29 year olds in 2017 had received a Bachelor's Degree or higher?",
+        question: "What percentage of WHITE 25-29 year olds in the US in 2017 had received a Bachelor's Degree or higher?",
         answers: ["62.7%", "42.1%", "22.8%","18.5%"],
         correctIndex: 1
     },
     {
-        question: "What percentage of BLACK 25-29 year olds in 2017 had received a Bachelor's Degree or higher?",
+        question: "What percentage of BLACK 25-29 year olds in the US in 2017 had received a Bachelor's Degree or higher?",
         answers: ["62.7%", "42.1%", "22.8%","18.5%"],
         correctIndex: 2
     },
     {
-        question: "What percentage of HISPANIC 25-29 year olds in 2017 had received a Bachelor's Degree or higher?",
+        question: "What percentage of HISPANIC 25-29 year olds in the US in 2017 had received a Bachelor's Degree or higher?",
         answers: ["62.7%", "42.1%", "22.8%","18.5%"],
         correctIndex: 3
     },
     {
-        question: "What percentage of ASIAN 25-29 year olds in 2017 had received a Bachelor's Degree or higher?",
+        question: "What percentage of ASIAN 25-29 year olds in the US in 2017 had received a Bachelor's Degree or higher?",
         answers: ["62.7%", "42.1%", "22.8%","18.5%"],
         correctIndex: 0
     },
     {
         question: "What percentage of undergraduate students had enrolled exclusively in distance learning course in 2015?",
-        answers: ["14.4%", "12.1%", "10.5%","9.2%"],
+        answers: ["14%", "10%","6%"],
         correctIndex: 0
     },
     {
         question: "What percentage of undergraduate students had not taken a distance learning course in 2015?",
-        answers: ["70%", "60%", "50%","40%"],
+        answers: ["70%", "50%", "30%"],
         correctIndex: 0
     },
     {
         question: "What percentage of undergraduate students reported having a disability in 2011?",
-        answers: ["3%", "5%", "8%","11%"],
-        correctIndex: 3
+        answers: ["3%", "7%","11%"],
+        correctIndex: 2
     },
     {
         question: "What is the average conversion rate from intern to full-time hire?",
@@ -78,8 +78,8 @@ var questionBank = [
     },
     {
         question: "On average, how many months in advance of start date do employers begin recruting interns?",
-        answers: ["3 months", "4 months", "5 months","8 months"],
-        correctIndex: 3
+        answers: ["1 month", "4 months", "8 months"],
+        correctIndex: 2
     },
     {
         question: "What is the average annual salary of the class of 2018 graduates?",
@@ -88,27 +88,27 @@ var questionBank = [
     },
     {
         question: "What percentage of college seniors have internship experience?",
-        answers: ["30%", "38%", "45%","55%"],
-        correctIndex: 3
+        answers: ["25%", "40%", "55%"],
+        correctIndex: 2
     },
     {
         question: "What percentage of employers deem critical thinking/problem solving as very extremely essential in new hires?",
-        answers: ["70%", "80%", "90%","100%"],
-        correctIndex: 0
+        answers: ["80%", "90%", "100%"],
+        correctIndex: 2
     },
     {
         question: "What percentage of career centers offer for-credit classes?",
-        answers: ["50%", "42%", "30%","22%"],
+        answers: ["72%", "42%", "12%"],
         correctIndex: 1
     },
     {
         question: "What percentage of career centers are housed in student affairs?",
-        answers: ["49%", "39%", "29%","19%"],
+        answers: ["49%", "29%", "9%"],
         correctIndex: 0
     },
     {
         question: "What is the median number of professional career services staff at an institution?",
-        answers: ["24", "17", "9","3"],
+        answers: ["33", "23", "13","3"],
         correctIndex: 3
     },
     //Quotes
@@ -144,64 +144,64 @@ var questionBank = [
     },
     {
         question: "Who said the following: \"The person who gets where he wants easily may not break a sweat — but he also will not have a story that inspires change — or that inspires others.\"",
-        answers: ["Eleanor Duckworth", "Theodor Geisel (Dr. Seuss)", "Jodi Picoult","Michael Jordan"],
+        answers: ["Eleanor Duckworth", "Theodor Geisel (Dr. Seuss)", "Jodi Picoult", "Michael Jordan"],
         correctIndex: 2
     },
     {
         question: "Who said the following: \"Until I learned how to use my lecture notes to prepare for tests, I was failing all of them.\"",
-        answers: ["John Gardner", "Kofi Annan", "John F. Kennedy","Roger Ebert"],
+        answers: ["John Gardner", "Kofi Annan", "John F. Kennedy", "Roger Ebert"],
         correctIndex: 0
     },
     {
         question: "Who said the following: \"Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family.\"",
-        answers: ["John Gardner", "Kofi Annan", "John F. Kennedy","Roger Ebert"],
+        answers: ["John Gardner", "Kofi Annan", "John F. Kennedy", "Roger Ebert"],
         correctIndex: 1
     },
     {
         question: "Who said the following: \"Too often…we enjoy the comfort of opinion without the discomfort of thought.\"",
-        answers: ["John Gardner", "Kofi Annan", "John F. Kennedy","Roger Ebert"],
+        answers: ["John Gardner", "Kofi Annan", "John F. Kennedy", "Roger Ebert"],
         correctIndex: 2
     },
     {
         question: "Who said the following: \"Racism and all the other 'isms' grow from primitive tribalism, the instinctive hostility against those of another tribe, race, religion, nationality, class, or whatever. You are a lucky [person] if your parents taught you to accept diversity.\"",
-        answers: ["John Gardner", "Kofi Annan", "John F. Kennedy","Roger Ebert"],
+        answers: ["John Gardner", "Kofi Annan", "John F. Kennedy", "Roger Ebert"],
         correctIndex: 3
     },
     {
         question: "Who said the following: \"The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.\"",
-        answers: ["John Gardner", "Kofi Annan", "John F. Kennedy","Steve Jobs"],
+        answers: ["John Gardner", "Kofi Annan", "John F. Kennedy", "Steve Jobs"],
         correctIndex: 3
     },
     // Academic Stats
     {
-        question: "___ % of two-year college students report that [in the current year?] they have worked “harder than they thought they could” to meet instructor expectations.",
-        answers: ["34%", "44%", "54%","64%"],
-        correctIndex: 2
-    },
-    {
-        question: "___ % of first-year students report that they are “above average” in emotional health.",
-        answers: ["57%", "47%", "37%", "27%"],
+        question: "___ % of two-year college students report that they have worked “harder than they thought they could” to meet instructor expectations.",
+        answers: ["34%", "54%"],
         correctIndex: 1
     },
     {
+        question: "___ % of first-year students report that they are “above average” in emotional health.",
+        answers: ["47%", "37%", "27%"],
+        correctIndex: 0
+    },
+    {
         question: "On a typical weekday, full-time college students spend ____ hours on educational activities, 2.3 hours working, 8.8 hours sleeping, and 4.0 hours on leisure/sports activities.",
-        answers: ["1.5", "2.5", "3.5", "4.5"],
-        correctIndex: 2
+        answers: ["1.5", "3.5", "5.5"],
+        correctIndex: 1
     },
     {
         question: "The unemployment rate for young people ages 21-25 without a college degree is ___ times as high as for those with a college degree.",
-        answers: ["1.5", "2", "2.5", "3"],
-        correctIndex: 3
+        answers: ["1", "2", "3"],
+        correctIndex: 2
     },
     {
         question: "___ % of new students report that during the current year, they often or very often “asked questions or contributed to course discussions in other ways.",
-        answers: ["31%", "41%", "51%", "61%"],
-        correctIndex: 3
+        answers: ["31%", "61%"],
+        correctIndex: 1
     },
     {
         question: "___ % of students report that they always complete readings and assignments before coming to class.",
-        answers: ["14%", "24%", "34%", "44%"],
-        correctIndex: 2
+        answers: ["14%", "34%", "64%"],
+        correctIndex: 1
     },
     {
         question: "___ % of community college students report that their college encourages them to spend \"significant amounts of time studying.\"",
@@ -210,23 +210,23 @@ var questionBank = [
     },
     {
         question: "___ % of community college students report that they had \"learned skills and strategies to improve [their] test-taking ability\" within the first three weeks of college.",
-        answers: ["17%", "27%", "37%", "57%"],
-        correctIndex: 3
+        answers: ["17%", "37%", "57%"],
+        correctIndex: 2
     },
     {
         question: "___ % of community college students report that in the current year, their coursework has emphasized \"making judgments about the value or soundness of information, arguments, or methods.\"",
-        answers: ["46%", "56%", "66%", "76%"],
-        correctIndex: 3
+        answers: ["36%", "56%", "76%"],
+        correctIndex: 1
     },
     {
         question: "Just over ___ % of community college students report that, during the current year, they often or very often have “prepared two or more drafts of a paper or assignment before turning it in",
-        answers: ["10%", "30%", "50%", "70%"],
+        answers: ["10%", "30%", "50%", "80%"],
         correctIndex: 2
     },
     {
         question: "___ % of undergraduate students report that stress has had a negative effect on their academic performance.",
-        answers: ["10%", "20%", "30%", "35%"],
-        correctIndex: 3
+        answers: ["15%", "25%", "35%"],
+        correctIndex: 2
     },
     // Career Stats
     {
@@ -261,13 +261,13 @@ var questionBank = [
     },
     {
         question: "___ % of working Americans are \"professional learners\" who took a course or got training for their jobs in the last year.",
-        answers: ["23%", "33%", "43%", "63%"],
-        correctIndex: 3
+        answers: ["23%", "43%", "63%"],
+        correctIndex: 2
     },
     {
         question: "___ % of employees who took a course/got extra training in the last year did so because they needed a license/certification for their job.",
-        answers: ["76%", "56%", "36%", "16%"],
-        correctIndex: 2
+        answers: ["36%", "16%"],
+        correctIndex: 0
     },
     {
         question: "___ % of employers report that they consider written communication skills very important in hiring new employees.",
