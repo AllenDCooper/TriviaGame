@@ -11,6 +11,9 @@ function getQuestions(arr) {
 
 // function to render trivia questions and answers
 function renderQuestions(questionSet) {
+    correctAnswers = 0;
+    incorrectAnswers = 0;
+    blankAnswers = 0;
     time = 60;
     runTimer();
     $("#timer-display").text("Time Remaining: " + 60 + " seconds");
