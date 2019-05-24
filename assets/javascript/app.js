@@ -26,7 +26,7 @@ function renderQuestions(questionSet) {
     // for loop to render questions
     for (i = 0; i < 4; i++) {
         var questionDiv = $("<p>");
-        questionDiv.text(questionSet[i].question);
+        questionDiv.text((i + 1) + ". " + questionSet[i].question);
         $("#display").append(questionDiv);
 
         // nested for loop to render answers for each question
