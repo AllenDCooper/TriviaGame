@@ -31,6 +31,8 @@ function renderQuestions(questionSet) {
 
         // nested for loop to render answers for each question
         for (j = 0; j < questionSet[i].answers.length; j++) {
+            var answerDiv = $("<div>");
+            answerDiv.addClass("answer-div");
             var answerButton = $("<input>");
             answerButton.attr("type", "radio");
             answerButton.attr("name", "question-" + (i + 1));
@@ -38,17 +40,23 @@ function renderQuestions(questionSet) {
             
             // checks to if answer is correct, and then stores that in answer's value attribute
             if (j === questionSet[i].correctIndex) {
-                answerButton.attr("value", "correct")
+                answerButton.attr("value", "correct");
+                answerDiv.attr("value", "correct");
             } else {
-                answerButton.attr("value", "incorrect")
+                answerButton.attr("value", "incorrect");
+                answerDiv.attr("value", "incorrect");
             }
+            // appends anwer button to answer div
+            answerDiv.append(answerButton)
             // renders answer button on the document
-            $("#display").append(answerButton);
+            // $("#display").append(answerButton);
 
             // renders button label on the document
             var answerLabel = $("<label>");
             answerLabel.append(questionSet[i].answers[j]);
-            $("#display").append(answerLabel);
+            answerDiv.append(answerLabel);
+            // $("#display").append(answerLabel);
+            $("#display").append(answerDiv);
         }
     }
 };
@@ -65,22 +73,25 @@ function endRound() {
         answer[i] = $("input[name='question-" + i + "']:checked").val();
         if (answer[i] === "correct") {
             correctAnswers++
+            $("input[name='question-" + i + "']:checked").parent().prepend("<span style='color:green;'>✔</span>");
         } else if (answer[i] === "incorrect") {
             incorrectAnswers++
+            $("input[name='question-" + i + "']:checked").parent().prepend("<span style='color:red;'>X</span>");
+            // $("input[name='question-" + i + "'][value='correct']").parent().prepend("<span style='color:green;'>✔</span>");
         } else {
             blankAnswers++
         }
     }
     // render scores on the page
-    $("#display").text("")
+    // $("#display").text("")
     clearInterval(intervalId);
     $("#timer-display").text("")
     $("button").remove();
-    $("#display").append("<h2>All Done!<h2>")
-    $("#display").append("<h3>Correct Answers: " + correctAnswers + "</h3>")
-    $("#display").append("<h3>Incorrect Answers: " + incorrectAnswers + "</h3>")
-    $("#display").append("<h3>Unanswered: " + blankAnswers + "</h3>")
-    $("#play-again-button").append("<button id=reset>Play Again</button>")
+    $("#play-again-button").prepend("<button id=reset>Play Again</button>")
+    $("#display").prepend("<h3>Unanswered: " + blankAnswers + "</h3>") 
+    $("#display").prepend("<h3>Incorrect Answers: " + incorrectAnswers + "</h3>")
+    $("#display").prepend("<h3>Correct Answers: " + correctAnswers + "</h3>")
+    $("#display").prepend("<h2>All Done!<h2>")
 };
 
 // function to score user answers when user submits
