@@ -1,5 +1,8 @@
 # TriviaGame
 Trivia Game using JavaScript and jQuery
+
+[https://allendcooper.github.io/TriviaGame/](https://allendcooper.github.io/TriviaGame/)
+
 ## Overview
 I) Used JavaScript and jQuery to build the following:
     1) A question bank of trivia questions, stored as an array of objects
